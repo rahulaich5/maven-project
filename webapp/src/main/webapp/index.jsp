@@ -1,1 +1,1 @@
-Hello, World! This is version2
+Hello, World! This is fully automated tutorial v1
