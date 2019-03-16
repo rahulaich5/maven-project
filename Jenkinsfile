@@ -33,7 +33,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "cp -f **/target/*.war /var/lib/tomcat/webapps"
+                        sh " sudo cp **/target/*.war /var/lib/tomcat/webapps"
                     }
                 }
 
