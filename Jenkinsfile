@@ -33,7 +33,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "scp -i /root/downloads/certs/tomcat-demo.pem **/target/*.war centos@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+                        sh "scp -i /root/downloads/certs/tomcat-demo.pem **/target/*.war /var/lib/tomcat7/webapps"
                     }
                 }
 
