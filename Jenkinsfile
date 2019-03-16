@@ -33,7 +33,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "scp -i  **/target/*.war /var/lib/tomcat7/webapps"
+                        sh "scp -i  **/target/*.war /var/lib/tomcat/webapps"
                     }
                 }
 
