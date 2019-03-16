@@ -33,13 +33,13 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "scp -i /home/jenkins/tomcat-demo.pem **/target/*.war centos@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+                        sh "scp -i /root/downloads/certs/tomcat-demo.pem **/target/*.war centos@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                     }
                 }
 
                 stage ("Deploy to Production"){
                     steps {
-                        sh "scp -i /home/jenkins/tomcat-demo.pem **/target/*.war centos@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
+                        sh "scp -i /root/downloads/certs/tomcat-demo.pem **/target/*.war centos@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
                     }
                 }
             }
